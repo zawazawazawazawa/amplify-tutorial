@@ -14,6 +14,12 @@
         "categories": {
             "auth": {
                 "boyaki9d6ac394": {}
+            },
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "d2po4bsem0g2dj",
+                    "type": "manual"
+                }
             }
         }
     }
