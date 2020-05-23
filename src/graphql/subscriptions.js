@@ -4,11 +4,11 @@
 export const onCreatePost = /* GraphQL */ `
   subscription OnCreatePost {
     onCreatePost {
+      type
       id
-      title
       content
-      price
-      rating
+      owner
+      timestamp
       createdAt
       updatedAt
     }
@@ -17,11 +17,11 @@ export const onCreatePost = /* GraphQL */ `
 export const onUpdatePost = /* GraphQL */ `
   subscription OnUpdatePost {
     onUpdatePost {
+      type
       id
-      title
       content
-      price
-      rating
+      owner
+      timestamp
       createdAt
       updatedAt
     }
@@ -30,11 +30,11 @@ export const onUpdatePost = /* GraphQL */ `
 export const onDeletePost = /* GraphQL */ `
   subscription OnDeletePost {
     onDeletePost {
+      type
       id
-      title
       content
-      price
-      rating
+      owner
+      timestamp
       createdAt
       updatedAt
     }

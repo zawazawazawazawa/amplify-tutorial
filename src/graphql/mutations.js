@@ -7,11 +7,11 @@ export const createPost = /* GraphQL */ `
     $condition: ModelPostConditionInput
   ) {
     createPost(input: $input, condition: $condition) {
+      type
       id
-      title
       content
-      price
-      rating
+      owner
+      timestamp
       createdAt
       updatedAt
     }
@@ -23,11 +23,11 @@ export const updatePost = /* GraphQL */ `
     $condition: ModelPostConditionInput
   ) {
     updatePost(input: $input, condition: $condition) {
+      type
       id
-      title
       content
-      price
-      rating
+      owner
+      timestamp
       createdAt
       updatedAt
     }
@@ -39,11 +39,11 @@ export const deletePost = /* GraphQL */ `
     $condition: ModelPostConditionInput
   ) {
     deletePost(input: $input, condition: $condition) {
+      type
       id
-      title
       content
-      price
-      rating
+      owner
+      timestamp
       createdAt
       updatedAt
     }
