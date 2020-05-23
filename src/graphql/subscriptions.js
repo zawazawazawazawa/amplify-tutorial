@@ -73,3 +73,63 @@ export const onDeleteFollowRelationship = /* GraphQL */ `
     }
   }
 `;
+export const onUpdateTimeline = /* GraphQL */ `
+  subscription OnUpdateTimeline {
+    onUpdateTimeline {
+      userId
+      timestamp
+      postId
+      post {
+        type
+        id
+        content
+        owner
+        timestamp
+        createdAt
+        updatedAt
+      }
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onDeleteTimeline = /* GraphQL */ `
+  subscription OnDeleteTimeline {
+    onDeleteTimeline {
+      userId
+      timestamp
+      postId
+      post {
+        type
+        id
+        content
+        owner
+        timestamp
+        createdAt
+        updatedAt
+      }
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onCreateTimeline = /* GraphQL */ `
+  subscription OnCreateTimeline($userId: String!) {
+    onCreateTimeline(userId: $userId) {
+      userId
+      timestamp
+      postId
+      post {
+        type
+        id
+        content
+        owner
+        timestamp
+        createdAt
+        updatedAt
+      }
+      createdAt
+      updatedAt
+    }
+  }
+`;
