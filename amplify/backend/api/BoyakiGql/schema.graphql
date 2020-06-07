@@ -3,10 +3,11 @@ type Post
   @auth(rules: [
     {allow: owner, ownerField:"owner", provider: userPools, operations:[read, create]},
     {allow: private, provider: userPools, operations:[read]},
-		{allow: private, provider: iam ,operations:[create]} #追加
+		{allow: private, provider: iam ,operations:[create]},
 	])
   @key(name: "SortByTimestamp", fields:["type", "timestamp"], queryField: "listPostsSortedByTimestamp")
   @key(name: "BySpecificOwner", fields:["owner", "timestamp"], queryField: "listPostsBySpecificOwner")
+  @searchable
 {
   type: String! # always set to 'post'. used in the SortByTimestamp GSI
   id: ID
@@ -14,6 +15,7 @@ type Post
   owner: String
   timestamp: AWSTimestamp!
 }
+
 
 type FollowRelationship
 	@model
